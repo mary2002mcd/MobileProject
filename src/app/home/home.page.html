@@ -16,7 +16,11 @@
   <div id="container">
  <h3>Welcome to Marys Project</h3>
   <ul>
-    <li>Next Page</li>
+    <li *ngFor="let x of films">
+      {{x.title}}
+    </li>
   </ul>
+
+
   </div>
 </ion-content>
