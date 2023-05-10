@@ -9,12 +9,14 @@ export class HomePage {
 
   films:any[]=[];
   movie:string =" ";
+  episode:any[]=[];
   constructor(private service:DataService) {}
 
   ngOnInit(): void {
     this.service.getData().subscribe(
       (data)=>{
           this.films = data.results;
+          this.episode = data.results;
       });
   }
 }

@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Books
+      Star Wars Movies
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,17 +9,21 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Movies</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
- <h3>Welcome to Marys Project</h3>
+ <!-- <h5>Welcome! Click on the title of the film you want to see information about!</h5> -->
   <ul>
     <li *ngFor="let x of films">
       {{x.title}}
     </li>
   </ul>
+
+  <ion-button [routerLink]="['/episode1']" fill="outline">Episode 1</ion-button>
+  <ion-button [routerLink]="['/episode2']" fill="outline">Episode 2</ion-button>
+  <ion-button [routerLink]="['/episode1']" fill="outline">Episode 3</ion-button>
 
 
   </div>
