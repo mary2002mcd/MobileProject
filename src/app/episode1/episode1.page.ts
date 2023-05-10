@@ -9,28 +9,25 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./episode1.page.scss'],
 })
 export class Episode1Page implements OnInit {
-
-  directors:any[]=[];
-  epNum:number = 1;
+  //declare variables
   films:any[]=[];
   favMovie:string = " ";
-
+//constuctor to allow use of imports
   constructor(private service:DataService, private storage:Storage, private navCtrl:NavController) {}
-
+  //to get the api data
   ngOnInit(): void {
     this.service.getData().subscribe(
       (data)=>{
           this.films = data.results;
-          this.directors = data.results;
-      
+ 
       });
   }
-
+//data persistance
   async ionViewWillEnter() {
     await this.storage.create();
     this.favMovie = await this.storage.get('episode1');
     }
-
+//method to save the answer and redirect to the home page
   async onSave(){
     await this.storage.create();
     await this.storage.set("episode1", this.favMovie);

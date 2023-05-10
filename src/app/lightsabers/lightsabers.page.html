@@ -5,11 +5,30 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" color="danger">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Lightsabers</ion-title>
     </ion-toolbar>
   </ion-header>
+
   <ion-img width="200" height="150" src="https://vignette.wikia.nocookie.net/powerlisting/images/f/f2/Lightsabers_and_Users.jpg/revision/latest?cb=20180827000817"></ion-img>
+  <!--Button that will reveal the pictures-->
+  <ion-button size="default" shape="round" (click)=show() >Press to activate light saber
+    <ion-ripple-effect></ion-ripple-effect>
+  </ion-button>
+
+  <h3> - Jedi Guardian's</h3>
+  <ion-img [hidden]="hidden" width="200" height="150" src="https://th.bing.com/th/id/R.b15db4d7155b2545eca85c30dca563cc?rik=YQj1x7X4WRZT%2fA&riu=http%3a%2f%2f4.bp.blogspot.com%2f-c77uEUmplnQ%2fT5GkRb6IiMI%2fAAAAAAAAAGI%2fOhgvOEh6yYA%2fs1600%2fLukes-Blue-Lightsaber_Star-Wars.png&ehk=FatW2U07iqZF8c%2fnVaq%2bNckO3pzx9JJFFhLkArBaYGI%3d&risl=&pid=ImgRaw&r=0"></ion-img>
+
+  <h3> - Sith/Dark Jedi</h3>
+  <ion-img [hidden]="hidden" width="200" height="150" src="https://th.bing.com/th/id/R.ef177732850574386cb6c4d4d75ac468?rik=jxmJ2NU3l5rvhA&riu=http%3a%2f%2fimages2.fanpop.com%2fimage%2fphotos%2f13700000%2fDarth-Vader-Wallpaper-darth-vader-13703254-1024-768.jpg&ehk=BXNDgj%2fUo0JzHWMRaKZ%2fqEpE%2fKpAvrR1CiyTUIDH0IE%3d&risl=&pid=ImgRaw&r=0"></ion-img>
+
+  <h3> - Jedi Counsuler</h3>
+  <ion-img [hidden]="hidden" width="200" height="150" src="https://th.bing.com/th/id/OIP.vXf9Hp6SOSo2yAuAQpXOcgAAAA?w=192&h=106&c=7&r=0&o=5&dpr=2&pid=1.7"></ion-img>
+
+  <h3> - Balance</h3>
+  <ion-img [hidden]="hidden" width="200" height="150" src="https://th.bing.com/th/id/OIP.fqOZX9GX2PN2hpwR8FIV5AHaE8?w=247&h=180&c=7&r=0&o=5&dpr=2&pid=1.7"></ion-img>
+
+
 </ion-content>

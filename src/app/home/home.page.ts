@@ -10,20 +10,21 @@ import { NavController } from '@ionic/angular';
 })
 export class HomePage {
 
+  //declare variables and arrays
   films:any[]=[];
   movie:string =" ";
-  episode:any[]=[];
   favMovie:string = " ";
+  //fill constructor with varibales in order to use the imports
   constructor(private service:DataService, private storage:Storage, private navCtrl:NavController) {}
 
+  // get api data
   ngOnInit(): void {
     this.service.getData().subscribe(
       (data)=>{
           this.films = data.results;
-          this.episode = data.results;
       });
   }
-
+  //for data persistance
   async ionViewWillEnter(){
     await this.storage.create();
     this.favMovie = await this.storage.get('episode1');

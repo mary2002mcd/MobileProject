@@ -11,6 +11,7 @@ export class FactsPage implements OnInit {
   movieData:any[]=[];
   constructor(private service:DataService) { }
 
+  //get data from api
   ngOnInit(): void {
     this.service.getData().subscribe(
       (data)=>{
