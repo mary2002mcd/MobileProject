@@ -15,15 +15,16 @@
 
   <div id="container">
  <!-- <h5>Welcome! Click on the title of the film you want to see information about!</h5> -->
-  <ul>
+ <h4>Fav: {{favMovie}}</h4>
+ <ul>
     <li *ngFor="let x of films">
       {{x.title}}
     </li>
   </ul>
 
-  <ion-button [routerLink]="['/episode1']" fill="outline">Episode 1</ion-button>
-  <ion-button [routerLink]="['/episode2']" fill="outline">Episode 2</ion-button>
-  <ion-button [routerLink]="['/episode1']" fill="outline">Episode 3</ion-button>
+  <ion-button [routerLink]="['/episode1']" fill="outline">Fav Movie</ion-button>
+  <ion-button [routerLink]="['/facts']" fill="outline">Facts</ion-button>
+  <ion-button [routerLink]="['/lightsabers']" fill="outline">Lightsabers</ion-button>
 
 
   </div>

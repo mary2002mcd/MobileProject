@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import {Storage} from '@ionic/storage-angular'
+import { NavController } from '@ionic/angular';
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -10,7 +13,8 @@ export class HomePage {
   films:any[]=[];
   movie:string =" ";
   episode:any[]=[];
-  constructor(private service:DataService) {}
+  favMovie:string = " ";
+  constructor(private service:DataService, private storage:Storage, private navCtrl:NavController) {}
 
   ngOnInit(): void {
     this.service.getData().subscribe(
@@ -18,5 +22,10 @@ export class HomePage {
           this.films = data.results;
           this.episode = data.results;
       });
+  }
+
+  async ionViewWillEnter(){
+    await this.storage.create();
+    this.favMovie = await this.storage.get('episode1');
   }
 }

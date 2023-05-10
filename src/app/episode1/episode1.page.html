@@ -1,14 +1,53 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>episode1</ion-title>
+    <ion-back-button></ion-back-button>
+    <ion-title>Favorite Movie?</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-back-button slot="start"></ion-back-button>
       <ion-title size="large">episode1</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <!-- <h3>Episodes and their directors</h3>
+  <ol>
+    <li *ngFor="let x of films">
+      {{x.title}}<br> Director: {{x.director}}
+    </li>
+  </ol> -->
+
+  <ion-list>
+    <ion-radio-group [(ngModel)]="favMovie">
+    <ion-item >
+      <ion-label>A New Hope</ion-label>
+      <ion-radio value="A New Hope"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>The Empire Strikes Back</ion-label>
+      <ion-radio value="The Empire Strikes Bac"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Return of the Jedi</ion-label>
+      <ion-radio value="Return of the Jedi"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>The Phantom Menace</ion-label>
+      <ion-radio value="The Phantom Menace"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Attack of the Clones</ion-label>
+      <ion-radio value="Attack of the Clones"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Revenge of the Sith</ion-label>
+      <ion-radio value="Revenge of the Sith"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+
+  </ion-list>
+
+  <ion-button (click)="onSave()">Save</ion-button>
 </ion-content>

@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-back-button></ion-back-button>
+    <ion-title>Movie Info</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">facts</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-img height="100" width="100" src="https://i.redd.it/bz5g6pkozhf11.jpg"></ion-img>
+  <ion-card *ngFor="let movie of movieData">
+    <ion-card-header>
+    <ion-card-title>{{movie.title}}</ion-card-title>
+    <ion-card-subtitle>Date: {{movie.release_date}}</ion-card-subtitle>
+    <ion-card-subtitle>Director: {{movie.director}}</ion-card-subtitle>
+    <ion-card-subtitle color="warning" >{{movie.opening_crawl}}</ion-card-subtitle>
+    </ion-card-header>
+    </ion-card>
+
+</ion-content>

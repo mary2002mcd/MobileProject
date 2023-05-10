@@ -10,14 +10,20 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },  {
-    path: 'episode1',
-    loadChildren: () => import('./episode1/episode1.module').then( m => m.Episode1PageModule)
   },
   {
-    path: 'episode2',
-    loadChildren: () => import('./episode2/episode2.module').then( m => m.Episode2PageModule)
+    path: 'episode1',
+    loadChildren: () => import('./episode1/episode1.module').then( m => m.Episode1PageModule)
+  },  {
+    path: 'facts',
+    loadChildren: () => import('./facts/facts.module').then( m => m.FactsPageModule)
   },
+  {
+    path: 'lightsabers',
+    loadChildren: () => import('./lightsabers/lightsabers.module').then( m => m.LightsabersPageModule)
+  },
+
+ 
 
 ];
 

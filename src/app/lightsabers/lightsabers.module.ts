@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { Episode2PageRoutingModule } from './episode2-routing.module';
+import { LightsabersPageRoutingModule } from './lightsabers-routing.module';
 
-import { Episode2Page } from './episode2.page';
+import { LightsabersPage } from './lightsabers.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    Episode2PageRoutingModule
+    LightsabersPageRoutingModule
   ],
-  declarations: [Episode2Page]
+  declarations: [LightsabersPage]
 })
-export class Episode2PageModule {}
+export class LightsabersPageModule {}
