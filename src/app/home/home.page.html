@@ -1,39 +1,43 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Star Wars Movies
+  <ion-toolbar color="dark">
+    <ion-title color="warning">
+      STAR WARS
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
+<!--Change colours to black and yellow because that is the star wars theme-->
 <ion-content [fullscreen]="true" color="dark">
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">STAR WARS</ion-title>
+    <ion-toolbar color="dark">
+      <ion-title size="large" color="warning" >STAR WARS</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-<!--Put an image at the beginning-->
- <ion-img src="https://th.bing.com/th/id/OIP.fXzET8932QEAPm2_VL9h2wHaEK?w=303&h=180&c=7&r=0&o=5&dpr=2&pid=1.7"></ion-img>
- <!--Allow user to enter their name-->
- <ion-item>
-  <ion-input label="Input with placeholder" placeholder="Enter your Jedi name padawon!"></ion-input>
-</ion-item>
-<!--Use the data persistance to display the movie they chose-->
- <h4>Your Favorite Movie is: {{favMovie}}</h4>
- <!--Some simple instuctions-->
- <ul>
-  <li>Welcome Padawon!</li>
-  <li>Click on Fav Movie to vote</li>
-  <li>Click on Facts to see about the movies</li>
-  <li>Click on Lightsabers to see the different kinds</li>
- </ul>
- <!--Lead to the other pages-->
- <!--Change colors to match star wars theme-->
-  <ion-button color="warning" [routerLink]="['/episode1']" fill="outline">Fav Movie</ion-button>
-  <ion-button color="warning" [routerLink]="['/facts']" fill="outline">Facts</ion-button>
-  <ion-button color="warning" [routerLink]="['/lightsabers']" fill="outline">Lightsabers</ion-button>
+  <!--Put an image at the beginning-->
+    <ion-img src="https://th.bing.com/th/id/OIP.fXzET8932QEAPm2_VL9h2wHaEK?w=303&h=180&c=7&r=0&o=5&dpr=2&pid=1.7"></ion-img>
+    <!--Allow user to enter their name-->
+    <ion-item>
+      <ion-input label="Input with placeholder" placeholder="Enter your Jedi name padawon!"></ion-input>
+    </ion-item>
+    <!--Use the data persistance to display the movie they chose-->
+    <h4>Your Favorite Movie is: {{favMovie}}</h4>
+
+    <!--Some simple instuctions-->
+    <ul>
+      <li>Welcome Padawon!</li>
+      <li>Click on Fav Movie to vote</li>
+      <li>Click on Facts to see about the movies</li>
+      <li>Click on Lightsabers to see the different kinds</li>
+      <li>Click on Galaxy to send an emergency signal</li>
+    </ul>
+    <!--Lead to the other pages-->
+    <!--Change colors to match star wars theme-->
+    <!--Navigation-->
+    <ion-button color="warning" [routerLink]="['/episode1']" routerDirection="forward" fill="outline">Fav Movie</ion-button>
+    <ion-button color="warning" [routerLink]="['/facts']" routerDirection="forward" fill="outline">Facts</ion-button>
+    <ion-button color="warning" [routerLink]="['/lightsabers']" routerDirection="forward" fill="outline">Lightsabers</ion-button>
+    <ion-button color="warning" [routerLink]="['/galaxy']" routerDirection="forward" fill="outline">Galaxy</ion-button>
 
   </div>
 </ion-content>

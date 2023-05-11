@@ -22,6 +22,10 @@ const routes: Routes = [
     path: 'lightsabers',
     loadChildren: () => import('./lightsabers/lightsabers.module').then( m => m.LightsabersPageModule)
   },
+  {
+    path: 'galaxy',
+    loadChildren: () => import('./galaxy/galaxy.module').then( m => m.GalaxyPageModule)
+  },
 
  
 

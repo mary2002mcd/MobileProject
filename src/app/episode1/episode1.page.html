@@ -12,36 +12,37 @@
     </ion-toolbar>
   </ion-header>
 
-  <!--Ion radio buttons to allow them to update their favourite movie-->
+  <!--Ion radio buttons to allow them to update their favourite movie on the home page-->
   <ion-list>
     <ion-radio-group [(ngModel)]="favMovie">
     <ion-item >
       <ion-label>A New Hope</ion-label>
-      <ion-radio value="A New Hope"></ion-radio>
+      <ion-radio color="danger" value="A New Hope"></ion-radio>
     </ion-item>
     <ion-item>
       <ion-label>The Empire Strikes Back</ion-label>
-      <ion-radio value="The Empire Strikes Bac"></ion-radio>
+      <ion-radio color="danger" value="The Empire Strikes Back"></ion-radio>
     </ion-item>
     <ion-item>
       <ion-label>Return of the Jedi</ion-label>
-      <ion-radio value="Return of the Jedi"></ion-radio>
+      <ion-radio color="danger" value="Return of the Jedi"></ion-radio>
     </ion-item>
     <ion-item>
       <ion-label>The Phantom Menace</ion-label>
-      <ion-radio value="The Phantom Menace"></ion-radio>
+      <ion-radio color="danger" value="The Phantom Menace"></ion-radio>
     </ion-item>
     <ion-item>
       <ion-label>Attack of the Clones</ion-label>
-      <ion-radio value="Attack of the Clones"></ion-radio>
+      <ion-radio color="danger" value="Attack of the Clones"></ion-radio>
     </ion-item>
     <ion-item>
       <ion-label>Revenge of the Sith</ion-label>
-      <ion-radio value="Revenge of the Sith"></ion-radio>
+      <ion-radio color="danger" value="Revenge of the Sith"></ion-radio>
     </ion-item>
   </ion-radio-group>
 
   </ion-list>
-<!--Button that calls the save function and brings them back to the home page-->
-  <ion-button (click)="onSave()">Save</ion-button>
+  <!--Button that calls the save function and brings them back to the home page-->
+  <!--Navigation-->
+  <ion-button (click)="onSave()" color="danger">Save</ion-button>
 </ion-content>

@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title color="warning">Galaxy</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="dark">
+  <ion-header collapse="condense">
+    <ion-toolbar color="dark">
+      <ion-title size="large" color="warning">Galaxy</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <!--Image of earth-->
+  <ion-img src="https://tse1.mm.bing.net/th?id=OIP.Eq8IFbUDmC9KAqOV1wUi4gHaHa&pid=Api&P=0"></ion-img>
+
+  <!--Button to get coordinace-->
+  <ion-button (click)="getGPS()" fill="outline" color="warning">Position</ion-button>
+  <!--Give message-->
+  <h3>Come in Rebel Aliance! I am stranded in a galaxy far far away! I need emergency transport at these coordinace!</h3>
+  <br>
+  <h1>{{lat}}, {{long}}</h1>
+
+  <!--Button menu-->
+  <!--Navigation-->
+  <br>
+  <ion-button color="warning" [routerLink]="['/episode1']" routerDirection="forward" fill="outline">Fav Movie</ion-button>
+  <ion-button color="warning" [routerLink]="['/facts']" routerDirection="forward" fill="outline">Facts</ion-button>
+  <ion-button color="warning" [routerLink]="['/lightsabers']" routerDirection="forward" fill="outline">Lightsabers</ion-button>
+  <ion-button color="warning" [routerLink]="['/home']" routerDirection="forward" fill="outline">Home</ion-button>
+
+</ion-content>

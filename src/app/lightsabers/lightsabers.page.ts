@@ -6,14 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lightsabers.page.scss'],
 })
 export class LightsabersPage implements OnInit {
-
+//boolean variable
   hidden = true;
  
   constructor() { }
 
   ngOnInit() {
   }
-
+//method to make the images appear
   show(){
     if(this.hidden == true){
       this.hidden = false;
